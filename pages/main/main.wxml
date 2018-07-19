@@ -1,0 +1,9 @@
+<!--pages/main/main.wxml-->
+<view class="container">
+  <view>
+    <button type="primary" size="default" bindtap="onTap1">按钮1</button>
+  </view>
+  <view>
+    <button type="default" size="default" bindtap="onTap2">按钮2</button>
+  </view>
+</view>
