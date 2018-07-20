@@ -1,0 +1,21 @@
+<!--pages/list/list.wxml-->
+<view class="list-container">
+  <scroll-view enable-back-to-top scroll-y class="scroll-list">
+    <view wx:key="{{index}}" wx:for="{{infoList}}" class="info-card">
+      <view>
+        <text class="start-icon">起</text>
+        <text class="location-text">{{item.start}}</text>
+      </view>
+      <view>
+        <text class="end-icon">终</text>
+        <text class="location-text">{{item.end}}</text>
+      </view>
+      <view>
+        <text class="user-icon">姓名:</text>
+        <text class="info-text">{{item.name}}</text>
+        <text class="info-text ml10">出发时间:</text>
+        <text class="info-text">{{item.time}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

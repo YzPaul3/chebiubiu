@@ -1,0 +1,86 @@
+/* pages/publish/publish.wxss */
+page {
+  background-color: rgb(240,240,240);
+}
+.form-area {
+  background-color: rgb(240,240,240);
+  font-size: 13px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  box-sizing:border-box;
+}
+.section {
+  width: 96%;
+  margin-top:6px;
+  background-color: #ffffff;
+}
+.form-item {
+  height: 44px;
+  border-bottom: 2px solid rgb(240,240,240);
+  display: flex;
+  align-items: center;
+}
+.form-item-textarea {
+  border-bottom: 2px solid rgb(240,240,240);
+  display: flex;
+  align-items: center;
+}
+.form-label {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 11px;
+}
+.start-icon {
+  width: 18px;
+  height: 17px;
+  line-height: 17px;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(52,115,243);
+}
+.end-icon {
+  width: 18px;
+  height: 17px;
+  text-align: center;
+  line-height: 17px;
+  color: #fff;
+  background-color: rgb(245,141,79);
+}
+.picker {
+  display: inline-block;
+  margin-right: 20px;
+}
+.input-area {
+  display: inline-block!important;
+}
+
+.btn-wrapper {
+  margin-top: 50px;
+}
+.cancel-btn {
+  background-color: #fff!important;
+  color: rgb(52,115,243)!important;
+}
+.publish-btn {
+  background-color: rgb(52,115,243)!important;
+  margin-left: 20px;
+}
+.btn {
+  font-size:16px!important;
+  display:inline-block;
+  width:160px;
+  height:44px;
+  line-height:44px!important;
+  border-radius:2px!important;
+  border:none;
+}
+button::after {
+  border: none;
+}
+
+radio-group {
+  display: inline-block;
+}

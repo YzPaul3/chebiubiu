@@ -16,6 +16,25 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
+.btn-wrapper {
+  margin-top: 150px;
+}
+.publish-btn {
+  background-color: #f58d4f!important;
+}
+.list-btn {
+  background-color: #3473f3!important;
+  margin-left: 62px;
+}
+.btn {
+  font-size: 15px;
+  display: inline-block;
+  width: 115px;
+  height: 51px;
+  line-height: 51px;
+  border-radius: 2px;
+  border: none;
+}
+button::after {
+  border: none;
 }
