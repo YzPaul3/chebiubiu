@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/main/main",
     "pages/publish/publish",
+    "pages/publish/publishResult/publishResult",
     "pages/list/list"
   ],
   "window": {

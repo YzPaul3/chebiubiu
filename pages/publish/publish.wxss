@@ -71,7 +71,7 @@ page {
 .btn {
   font-size:16px!important;
   display:inline-block;
-  width:160px;
+  width:140px;
   height:44px;
   line-height:44px!important;
   border-radius:2px!important;

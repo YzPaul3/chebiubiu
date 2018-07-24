@@ -1,0 +1,9 @@
+<!--pages/publish/publishResult/publishResult.wxml-->
+<view class="container">
+  <image style="width: 70px; height: 70px;" src="/pages/static/images/publishSuccess.png" mode="aspectFill">
+  </image>
+  <text class="result-text">发布成功啦!</text>
+  <view class="btn-wrapper">
+    <button class="confirm-btn" type="default" size="default" bindtap="navToMain">确定</button>
+  </view>
+</view>

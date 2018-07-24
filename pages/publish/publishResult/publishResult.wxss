@@ -1,0 +1,11 @@
+/* pages/publish/publishResult/publishResult.wxss */
+.result-text {
+  color: rgb(245,141,79);
+  font-size: 25px;
+  margin-top:31px;
+}
+.confirm-btn {
+  margin-top: 100px;
+  width: 116px;
+  height: 45px;
+}

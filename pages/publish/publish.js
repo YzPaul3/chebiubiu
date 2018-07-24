@@ -7,14 +7,14 @@ Page({
   data: {
     index: 0,
     countArray: [1,2,3,4,5],
-    start: '',
-    end: '',
+    startpoint: '',
+    endpoint: '',
     date: '2017-09-01',
     time: '12:01',
-    gender: 'male',
+    gender: 1,
     sexRadio: [
-      { name: '男', value: 'male', checked: 'true' },
-      { name: '女', value: 'female' }
+      { name: '男', value: 1, checked: 'true' },
+      { name: '女', value: 0 }
     ]
   },
   bindDateChange: function (e) {
@@ -35,6 +35,59 @@ Page({
   radioChange: function(e) {
     this.setData({
       gender: e.detail.value
+    })
+  },
+  formSubmit: function(e) {
+    var {startpoint, endpoint, phone, remark, username} = e.detail.value;
+    if (! (startpoint && endpoint && phone && username)) {
+      wx.showToast({
+        title: '有必填项未填写',
+        icon: 'none',
+        duration: 2000
+      })
+      return;
+    }
+    var params = {
+      loginCode: wx.getStorageSync('loginCode'),
+      gender: this.data.gender,
+      needseats: this.data.countArray[this.data.index],
+      startpoint: startpoint,
+      endpoint: endpoint,
+      username: username,
+      phone: phone,
+      remark: remark,
+      departure: this.formatDateTime()
+    }
+    this.publishReq(params)
+  },
+  formatDateTime() {
+    let res = this.data.date + ' ' + this.data.time;
+    return res;
+  },
+  publishReq(params) {
+    var self = this;
+    wx.request({
+      url: 'https://www.dafanshu.top/order/passenger/createorder',
+      data: params,
+      method: 'POST',
+      success: function (res) {
+        if (+res.data.status === 1) {
+          wx.redirectTo({
+            url: './publishResult/publishResult'
+          })
+          return;
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 2000
+          })
+          return;
+        }
+        self.setData({
+          msg: res.data.msg
+        })
+      }
     })
   },
   /**

@@ -4,11 +4,11 @@
   <view class="section">
     <view class="form-item" style="flex-direction:row;">
       <view class="form-label start-icon">起</view>
-      <input class="input-area" name="start" placeholder="请输入始发地" />
+      <input class="input-area" name="startpoint" placeholder="请输入始发地" />
     </view>
     <view class="form-item">
       <text class="form-label end-icon">终</text>
-      <input class="input-area" name="end" placeholder="请输入目的地" />
+      <input class="input-area" name="endpoint" placeholder="请输入目的地" />
     </view>
     <view class="form-item" style="flex-direction:row;">
       <text class="form-label">出发时间：</text>
@@ -27,19 +27,19 @@
   <view class="section" style="margin-top:23rpx;">
     <view class="form-item" style="flex-direction:row;">
       <view class="form-label">姓名：</view>
-      <input class="input-area" name="start" placeholder="请输入真实姓名" />
+      <input class="input-area" name="username" placeholder="请输入真实姓名" />
     </view>
     <view class="form-item" style="flex-direction:row;">
       <view class="form-label">性别：</view>
       <radio-group class="radio-group" bindchange="radioChange">
-        <label class="radio" wx:for="{{sexRadio}}">
+        <label class="radio" wx:key="{{index}}" wx:for="{{sexRadio}}">
           <radio color="rgb(52,115,243)" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
         </label>
       </radio-group>
     </view>
     <view class="form-item" style="flex-direction:row;">
       <view class="form-label">电话：</view>
-      <input class="input-area" type="number" name="phoneNumber" placeholder="请输入您的电话号码" />
+      <input class="input-area" type="number" name="phone" placeholder="请输入您的电话号码" />
     </view>
   </view>
   <view class="section" style="margin-top:23rpx;">
@@ -52,12 +52,12 @@
       </picker>
     </view>
     <view class="form-item-textarea" style="flex-direction:row;">
-      <textarea class="input-area" placeholder-style="margin-left: 10px" style="width:100%;height:130rpx;" name="phoneNumber" placeholder="请输入备注信息" />
+      <textarea class="input-area" placeholder-style="margin-left: 10px" style="width:100%;height:130rpx;" name="remark" placeholder="请输入备注信息" />
     </view>
   </view>
   <view class="btn-wrapper">
     <button class="cancel-btn btn" type="primary" size="default" >取消</button>
-    <button class="publish-btn btn" type="primary" size="default" >发布 </button>
+    <button class="publish-btn btn" type="primary" size="default" formType="submit">发布 </button>
   </view>
 </view>
 </form>
