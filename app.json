@@ -5,7 +5,8 @@
     "pages/main/main",
     "pages/publish/publish",
     "pages/publish/publishResult/publishResult",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/list/orderDetail/orderDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

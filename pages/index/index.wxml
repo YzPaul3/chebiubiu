@@ -5,7 +5,7 @@
     <block wx:else>
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <text>msg: {{msg}}</text>
+      <text style="color: #aaa;font-size:12px;margin-top:12px;">调试信息: {{msg}}</text>
       <view class="btn-wrapper">
         <button class="publish-btn btn" type="primary" size="default" bindtap="navToPublish">发布拼车</button>
         <button class="list-btn btn" type="primary" size="default" bindtap="navToList">拼车列表 </button>

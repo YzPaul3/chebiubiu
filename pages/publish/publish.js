@@ -1,4 +1,5 @@
 // pages/publish/publish.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -9,8 +10,8 @@ Page({
     countArray: [1,2,3,4,5],
     startpoint: '',
     endpoint: '',
-    date: '2017-09-01',
-    time: '12:01',
+    date: util.formateDate(new Date()),
+    time: util.formateTime(new Date()),
     gender: 1,
     sexRadio: [
       { name: '男', value: 1, checked: 'true' },

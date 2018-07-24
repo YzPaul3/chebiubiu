@@ -1,0 +1,42 @@
+<!--pages/list/orderDetail/orderDetail.wxml-->
+<!--pages/publish/publish.wxml-->
+<view class="form-area">
+  <view class="section">
+    <view class="form-item" style="flex-direction:row;">
+      <view class="form-label start-icon">起</view>
+      <text>{{detail.startpoint}}</text>
+    </view>
+    <view class="form-item">
+      <text class="form-label end-icon">终</text>
+      <text>{{detail.endpoint}}</text>
+    </view>
+    <view class="form-item" style="flex-direction:row;">
+      <text class="form-label">出发时间：</text>
+      <text>{{detail.departureStr}}</text>
+    </view>
+  </view>
+  <view class="section" style="margin-top:23rpx;">
+    <view class="form-item" style="flex-direction:row;">
+      <view class="form-label">姓名：</view>
+      <text>{{detail.username}}</text>
+    </view>
+    <view class="form-item" style="flex-direction:row;">
+      <view class="form-label">性别：</view>
+      <text>{{detail.gender == '1' ? '男' : '女' }}</text>
+    </view>
+    <view class="form-item" style="flex-direction:row;">
+      <view class="form-label">电话：</view>
+      <text>{{detail.phone}}</text>
+    </view>
+  </view>
+  <view class="section" style="margin-top:23px;">
+    <view class="form-item" style="flex-direction:row;">
+      <view class="form-label">乘车人数：</view>
+      <text>{{detail.needseats}}</text>
+    </view>
+    <view class="form-item-textarea" style="flex-direction:row;">
+      <text class="text-remark">
+备注信息：{{detail.remark ? detail.remark : ''}}</text>
+    </view>
+  </view>
+</view>

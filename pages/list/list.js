@@ -62,12 +62,42 @@ Page({
         time: '2018-8-18  15:30'
       }]
   },
-
+  getInfoList: function() {
+    var loginCode = wx.getStorageSync('loginCode');
+    var self = this;
+    wx.request({
+      url: 'https://www.dafanshu.top/order/all/findpassengerorders',
+      data: {
+        loginCode: loginCode
+      },
+      success: function (res) {
+        if (+res.data.status === 1) {
+          self.setData({
+            infoList: res.data.results
+          });
+          return;
+        } else {
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 2000
+          })
+          return;
+        }
+      }
+    })
+  },
+  seeOrderDetail: function(e) {
+    var orderId = e.currentTarget.dataset.name.orderId
+    wx.navigateTo({
+      url: './orderDetail/orderDetail?orderId=' + orderId
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getInfoList()
   },
 
   /**
