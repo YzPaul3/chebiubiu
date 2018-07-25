@@ -11,26 +11,36 @@
       <text>{{detail.endpoint}}</text>
     </view>
     <view class="form-item" style="flex-direction:row;">
+      <image style="width: 18px; height: 18px;margin-left:10px;" src="/pages/static/images/departure.png" mode="aspectFill">
+      </image>
       <text class="form-label">出发时间：</text>
       <text>{{detail.departureStr}}</text>
     </view>
   </view>
   <view class="section" style="margin-top:23rpx;">
     <view class="form-item" style="flex-direction:row;">
+      <image style="width: 18px; height: 18px;margin-left:10px;" src="/pages/static/images/username.png" mode="aspectFill">
+      </image>
       <view class="form-label">姓名：</view>
       <text>{{detail.username}}</text>
     </view>
     <view class="form-item" style="flex-direction:row;">
+      <image style="width: 18px; height: 18px;margin-left:10px;" src="/pages/static/images/gender.png" mode="aspectFill">
+      </image>
       <view class="form-label">性别：</view>
       <text>{{detail.gender == '1' ? '男' : '女' }}</text>
     </view>
     <view class="form-item" style="flex-direction:row;">
+      <image style="width: 18px; height: 18px;margin-left:10px;" src="/pages/static/images/phone.png" mode="aspectFill">
+      </image>
       <view class="form-label">电话：</view>
-      <text>{{detail.phone}}</text>
+      <text style="color:rgb(52,115,243);" bindtap="makePhoneCall" data-name="{{detail.phone}}">{{detail.phone}}</text>
     </view>
   </view>
   <view class="section" style="margin-top:23px;">
     <view class="form-item" style="flex-direction:row;">
+      <image style="width: 18px; height: 18px;margin-left:10px;" src="/pages/static/images/needseats.png" mode="aspectFill">
+      </image>
       <view class="form-label">乘车人数：</view>
       <text>{{detail.needseats}}</text>
     </view>

@@ -12,9 +12,9 @@ Page({
     endpoint: '',
     date: util.formateDate(new Date()),
     time: util.formateTime(new Date()),
-    gender: 1,
+    gender: null,
     sexRadio: [
-      { name: '男', value: 1, checked: 'true' },
+      { name: '男', value: 1 },
       { name: '女', value: 0 }
     ]
   },
@@ -38,9 +38,11 @@ Page({
       gender: e.detail.value
     })
   },
+  formReset: function () {
+  },
   formSubmit: function(e) {
-    var {startpoint, endpoint, phone, remark, username} = e.detail.value;
-    if (! (startpoint && endpoint && phone && username)) {
+    var {startpoint, endpoint, phone, remark, username, gender} = e.detail.value;
+    if (! (startpoint && endpoint && phone && username && ['0', '1'].indexOf(gender) > -1)) {
       wx.showToast({
         title: '有必填项未填写',
         icon: 'none',

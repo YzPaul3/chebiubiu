@@ -38,6 +38,15 @@ Page({
       }
     })
   },
+  makePhoneCall: function(e) {
+    var phoneNum = e.currentTarget.dataset.name
+    if (phoneNum) {
+      wx.makePhoneCall({
+        phoneNumber: phoneNum
+      })
+    }
+    return;
+  },
   /**
    * 生命周期函数--监听页面加载
    */
